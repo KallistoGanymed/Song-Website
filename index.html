@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hypermodern Song Request Portal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="login-container" id="login-container" style="display: none;">
+      <input type="text" id="username" placeholder="Benutzername">
+      <input type="password" id="password" placeholder="Passwort">
+      <button onclick="login()">Einloggen</button>
+    </div>
+
+    <div class="song-container">
+      <h1>Songwunsch Portal</h1>
+      <form id="songForm">
+        <input type="text" id="songName" placeholder="Liedwunsch" required>
+        <input type="text" id="artist" placeholder="Interpret" required>
+        <button type="submit">Abschicken</button>
+      </form>
+
+      <div id="songList" style="display: none;">
+        <h3>Alle Songwünsche</h3>
+        <ul id="list"></ul>
+        <button onclick="logout()">Abmelden</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Login Icon -->
+  <div id="login-icon" onclick="toggleLogin()">
+    <img src="login-icon.png" alt="Login Icon">
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

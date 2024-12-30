@@ -1,0 +1,114 @@
+/* General body styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background: url('image.jpg') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+/* Main container with rounder edges */
+.container {
+  backdrop-filter: blur(15px);
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 30px; /* Rounder edges */
+  padding: 30px;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Inputs and buttons with both sides as half-circles */
+input, button {
+  display: block;
+  width: calc(100% - 40px);
+  margin: 10px auto;
+  padding: 12px;
+  border-radius: 20px; /* Fully rounded (half-circle appearance) */
+  border: none;
+  font-size: 16px;
+  outline: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Input styles */
+input {
+  background: rgba(255, 255, 255, 0.8);
+  color: #333;
+  font-weight: bold;
+}
+
+/* Button styles */
+button {
+  background: linear-gradient(45deg, #007bff, #00d4ff);
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: linear-gradient(45deg, #0056b3, #007bff);
+  transform: translateY(-2px);
+}
+
+/* Login icon */
+#login-icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+
+#login-icon img {
+  width: 40px;
+  height: 40px;
+}
+
+/* Song list styles */
+#songList ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+#songList li {
+  background: rgba(255, 255, 255, 0.8);
+  color: #333;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Headings */
+h1, h2, h3 {
+  font-family: 'Arial', sans-serif;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 1.8em;
+}
+
+h2, h3 {
+  font-size: 1.4em;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+
+  input, button {
+    width: calc(100% - 20px);
+  }
+}

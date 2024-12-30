@@ -1,12 +1,21 @@
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_PROJECT.firebaseapp.com",
-  databaseURL: "https://YOUR_PROJECT.firebaseio.com",
-  projectId: "YOUR_PROJECT_ID",
-  storageBucket: "YOUR_PROJECT.appspot.com",
-  messagingSenderId: "SENDER_ID",
-  appId: "APP_ID"
+  apiKey: "AIzaSyAc2gzISO_c8jhSvOW3R3ZRldUTlIPDAwo",
+  authDomain: "song-website-bc75d.firebaseapp.com",
+  databaseURL: "https://song-website-bc75d-default-rtdb.europe-west1.firebasedatabase.app",
+  projectId: "song-website-bc75d",
+  storageBucket: "song-website-bc75d.firebasestorage.app",
+  messagingSenderId: "604054100668",
+  appId: "1:604054100668:web:91e0cf574075a0be40ceb9"
 };
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
 
 let users = [{ username: "admin", password: "1234" }];
 let songRequests = JSON.parse(localStorage.getItem("songRequests")) || [];
